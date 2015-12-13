@@ -8,6 +8,7 @@ gem 'pg', '~> 0.15'
 ## CSS
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'adminlte2-rails'
 
 
 ## JS
@@ -20,6 +21,7 @@ gem 'turbolinks'
 
 ## Template Engines
 gem 'jbuilder', '~> 2.0'
+gem 'slim-rails'
 
 
 ## Authentication
@@ -41,6 +43,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  gem 'capybara'
 end
 
 group :doc do
