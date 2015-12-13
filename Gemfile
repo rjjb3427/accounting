@@ -3,12 +3,17 @@ source 'https://rubygems.org'
 ## Core
 gem 'rails', '4.2.5'
 gem 'pg', '~> 0.15'
+# gem 'puma'
 
 
 ## CSS
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'adminlte2-rails'
+# gem 'normalize-rails', '~> 3.0.0'
+# gem 'bourbon', '~> 4.2.0'
+# gem 'neat', '~> 1.7.0'
+# gem 'compass-rails'
 
 
 ## JS
@@ -28,25 +33,52 @@ gem 'slim-rails'
 gem 'devise'
 
 
+# Helpers
+# gem 'flutie'
+# gem 'simple_form'
+# gem 'title'
+
+
 ## Utils
 gem 'figaro'
+# gem 'newrelic_rpm', '>= 3.9.8'
+# gem 'rack-canonical-host'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.4.0'
+  # gem 'awesome_print'
+  # gem 'bullet'
+  # gem 'bundler-audit', require: false
+  # gem 'dotenv-rails'
+  gem 'factory_girl_rails'
+  # gem 'i18n-tasks'
+  # gem 'pry-byebug'
+  # gem 'pry-rails'
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'quiet_assets'
+  # gem 'refills'
 end
 
 group :test do
   gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  # gem 'formulaic'
+  # gem 'launchy'
+  # gem 'shoulda-matchers'
+  # gem 'simplecov', require: false
+  # gem 'timecop'
+  # gem 'webmock'
+end
+
+group :staging, :production do
+  # gem 'rack-timeout'
 end
 
 group :doc do
